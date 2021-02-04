@@ -1,0 +1,13 @@
+<div class="container">
+    <div class='row'>
+        {{#each artists}}
+            <div class= 'col-4'>
+                <img src="{{images.0.url}}" alt="{{name}} photo">
+                <h3>{{name}}</h3>
+                <a class="btn btn-secondary" href="/{{id}}">View Albums</a>
+                <hr>
+            </div>
+        {{/each}}
+    </div>
+
+</div>

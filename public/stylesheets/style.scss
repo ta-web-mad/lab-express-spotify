@@ -1,4 +1,28 @@
-body {
-  padding: 50px;
-  font-family: sans-serif;
+html body {
+  
+  margin:0px;
+  height:100%;
+  
+}
+
+img {
+  height: 250px;
+}
+
+h3 {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.index{
+  color: white;
+  height: 100vh;
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  
+}
+
+form {
+  padding-top: 50vh;
+  padding-left: 50vh;
 }
