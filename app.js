@@ -9,6 +9,7 @@ require('./configs/debugger.config')
 // App
 const express = require('express')
 const app = express()
+const hbs = require('hbs');
 
 // Configs
 require('./configs/preformatter.config')(app)
