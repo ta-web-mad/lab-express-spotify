@@ -1,9 +1,11 @@
 <div class="container">
-    <div class="row">
-        {{#each data}}
-        <div class="col-md-4 beers">
-            {{this.name}}
-        </div>
-        {{/each}}
-    </div>
+    <h1>Artist results</h1>
+    <ul>
+    {{#each artist}}
+    <li>{{name}}</li>
+    {{/each}}
+    </ul>
+
+
+
 </div>

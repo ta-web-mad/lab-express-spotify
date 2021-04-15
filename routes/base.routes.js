@@ -19,16 +19,15 @@ router.get('/', (req, res) => res.render('index'))
 // router.get('/artist-results', (req, res) => )
 
 // Query strings
-router.get('/artist-results', (req, res) => {
+router.get('/artist-search', (req, res) => {
     console.log(req.query.artist)
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-    console.log('The received data from the API: ', data.body)
-    res.render('artist-search-results', data.body)
+    console.log('The received data from the API: ', data.body.artists)
+    res.render('artist-search-results', {artist: data.body.artists})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err))
-    // res.render('artist-results', req.query)
 })
 
 
