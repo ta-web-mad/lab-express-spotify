@@ -1,5 +1,47 @@
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif; }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+  padding-bottom: 15%; }
+
+.form-box {
+  width: 40%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.4); }
+
+.login-form > * {
+  margin: 10px 0; }
+
+.login-form > input[type=text] {
+  width: 60%;
+  height: 30px;
+  border-radius: 3px;
+  border: 3px solid white; }
+
+.login-form > input[type=submit] {
+  width: 30%;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  border: 2px solid red; }
+
+.main-form {
+  margin: 0;
+  padding: 0 !important;
+  background: url("../images/spotify-background.jpeg") no-repeat;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
