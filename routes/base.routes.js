@@ -23,12 +23,28 @@ router.get('/artist-search', (req, res) => {
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-    // console.log('The received data from the API: ', data.body.artists)
+    console.log('The received data from the API: ', data.body.artists.items )
     res.render('artist-search-results', { artist: data.body.artists.items })
-    console.log(artist)
+    console.log(data.body.artists.items)
     })
     .catch(err => console.log('The error while searching artists occurred: ', err))
 })
+
+// Search albums
+router.get('/albums/:id', (req, res) => {
+
+
+spotifyApi.getArtistAlbums(req.params.id)
+  .then(function(data) {
+    // console.log('Artist albums', data.body.items);
+    res.render('albums', { albums: data.body.items })
+    // res.view('Artist albums')
+  }, function(err) {
+    console.error(err);
+  });
+
+  })
+
 
 
 module.exports = router
