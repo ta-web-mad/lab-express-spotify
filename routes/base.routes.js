@@ -33,7 +33,6 @@ router.get('/artist-search', (req, res) => {
 // Search albums
 router.get('/albums/:id', (req, res) => {
 
-
 spotifyApi.getArtistAlbums(req.params.id)
   .then(function(data) {
     // console.log('Artist albums', data.body.items);
@@ -45,6 +44,19 @@ spotifyApi.getArtistAlbums(req.params.id)
 
   })
 
+// Get tracks in an album
+router.get('/albums/preview/:id', (req, res) => {
+
+spotifyApi.getAlbumTracks(req.params.id, { limit : 5, offset : 1 })
+  .then(function(data) {
+    console.log(data.body.items);
+    // res.view('Album tracks')
+    res.render('preview_url', { tracks: data.body.items })
+  }, function(err) {
+    // console.log('Something went wrong!', err);
+  });
+
+  })
 
 
 module.exports = router
